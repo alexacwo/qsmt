@@ -23,7 +23,7 @@ get_header(); ?>
 			<div class="col-lg-1">
 			</div>
 			<div class="site-branding col-xs col-lg-10" style="text-align:right; padding-top:290px; color: #fff;">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/inside_out.png" style="padding-bottom: 18px;"/>
+				<img src="<?php echo get_template_directory_uri(); ?>/img/home/inside_out.png" style="padding-bottom: 18px; max-width: 100%;"/>
 				
 				<span style="text-transform: uppercase; padding-bottom: 25px; display: block;">Clothing, cloth<br>
 				and the meeting of cultures</span>
@@ -76,7 +76,7 @@ get_header(); ?>
 
 					</div>
 					<div class="col-lg-4">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/frontpage_dancing.jpg" />
+						<img src="<?php echo get_template_directory_uri(); ?>/img/home/frontpage_dancing.jpg" />
 					</div>
 				</div>
 				
@@ -86,15 +86,15 @@ get_header(); ?>
 				<div class="row frontpage-bottom-block">
 					<div class="col-lg-4">
 						<h3>Program</h3>
-						<img src="<?php echo get_template_directory_uri(); ?>/img/frontpage_program.jpg" />
+						<img src="<?php echo get_template_directory_uri(); ?>/img/home/frontpage_program.jpg" />
 					</div>
 					<div class="col-lg-4">
 						<h3>Registration</h3>
-						<img src="<?php echo get_template_directory_uri(); ?>/img/frontpage_registration.jpg" />
+						<img src="<?php echo get_template_directory_uri(); ?>/img/home/frontpage_registration.jpg" />
 					</div>
 					<div class="col-lg-4">
 						<h3>Plan Your Trip</h3>
-						<img src="<?php echo get_template_directory_uri(); ?>/img/frontpage_plan.jpg" />
+						<img src="<?php echo get_template_directory_uri(); ?>/img/home/frontpage_plan.jpg" />
 					</div>
 				</div>
 			</div>

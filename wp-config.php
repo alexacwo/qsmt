@@ -26,7 +26,7 @@ define('DB_NAME', 'qsmt');
 define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'aq798803');
+define('DB_PASSWORD', '');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');

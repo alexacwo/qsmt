@@ -19,7 +19,7 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php endif; ?>
 	<?php wp_head(); ?>
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 </head>
@@ -30,20 +30,17 @@
 		<?php if (( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ))  ) : ?>
 			<div id="site-header-menu" class="site-header-menu container-fluid">
 				<div class="row">
-				<div class="hidden-xs col-lg-2">
+				<div class="hidden-xs col-sm-1 col-md-1 col-lg-1 col-xl-1 col-xxl-2">
 				</div> 
-				<div class="col-xs-12 col-lg-8 site-header-logos-parent">
+				<div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 col-xl-10 col-xxl-8 site-header-logos-parent">
 				
-					<div class="col-xs-12 col-lg-4 site-header-logos">
+					<div class="col-xs-12 col-sm-8 col-md-6 col-lg-5 col-xl-4 site-header-logos">
 						<div>
-							<img src="<?php echo get_template_directory_uri(); ?>/img/qsmt_logo.png" />
-						</div>						
-						<div>
-							<img src="<?php echo get_template_directory_uri(); ?>/img/com_costume.png" />
+						<img src="<?php echo get_template_directory_uri(); ?>/img/qsmt_logo.png" /></div><div><img src="<?php echo get_template_directory_uri(); ?>/img/com_costume.png" />
 						</div>
 					</div>
 					
-					<nav id="site-navigation" class="main-navigation col-xs-12 col-lg-8" role="navigation" aria-label="<?php esc_attr_e( 'Primary Menu', 'qsmt' ); ?>">
+					<nav id="site-navigation" class="main-navigation col-xs-12 col-sm-4 col-md-6 col-lg-7 col-xl-8" role="navigation" aria-label="<?php esc_attr_e( 'Primary Menu', 'qsmt' ); ?>">
 					
 						<a href="#" class="mobile-menu">
 							<img src="<?php echo get_template_directory_uri(); ?>/img/menu_ham.png" />
@@ -52,21 +49,32 @@
 						<script>
 							jQuery( document ).ready(function() {
 									
-								jQuery( '#site-navigation li:has(ul)' ).doubleTapToGo();
+								//jQuery( '#site-navigation li:has(ul)' ).doubleTapToGo();
 								jQuery( '.mobile-menu').click(function (event) {
 									event.preventDefault();
 									
-									jQuery('.menu').toggle();
-								}); /*
+									//jQuery('.menu').();
+									jQuery('.menu li').slideToggle();
+								});  
 								 
-								jQuery( '#menu-primary>li').hover(function () {
+								/* jQuery( '#menu-primary>li').hover(function () {
 									clearTimeout(jQuery.data(this,'timer'));
 									jQuery('ul',this).stop(true,true).slideDown(200);
 								}, function () {
 									jQuery.data(this,'timer', setTimeout(jQuery.proxy(function() {
 										jQuery('ul',this).stop(true,true).slideUp(200);
 									}, this), 100));
-								}); */
+								}); */ 
+								
+								 jQuery( '#menu-primary>li').hover(function ( ) {  
+									clearTimeout(jQuery.data(this,'timer'));
+									jQuery('ul',this).stop(true,true).slideDown(200);
+								}, function ( ) { 
+									event.preventDefault();
+									jQuery.data(this,'timer', setTimeout(jQuery.proxy(function() {
+										jQuery('ul',this).stop(true,true).slideUp(200);
+									}, this), 100));
+								});    
 							});
 						</script>
 						
@@ -81,10 +89,10 @@
 					</nav> 
 					
 				</div>
-				<div class="hidden-xs col-lg-2">
+				<div class="hidden-xs col-sm-1 col-md-1 col-lg-1 col-xl-1 col-xxl-2">
 				</div>
 			</div><!-- .site-header-menu -->
 		<?php endif; ?>
 	</header>
 				
-	<section id="content" class="row site-content">
+	<section id="content" class="row1 site-content">
