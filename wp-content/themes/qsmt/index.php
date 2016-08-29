@@ -85,16 +85,22 @@ get_header(); ?>
 				
 				<div class="row frontpage-bottom-block">
 					<div class="col-lg-4">
-						<h3>Program</h3>
-						<img src="<?php echo get_template_directory_uri(); ?>/img/home/frontpage_program.jpg" />
+						<a href="<?php echo get_home_url(); ?>/symposium-program/">
+							<h3>Program</h3>
+							<img src="<?php echo get_template_directory_uri(); ?>/img/home/frontpage_program.jpg" />
+						</a>
 					</div>
 					<div class="col-lg-4">
-						<h3>Registration</h3>
-						<img src="<?php echo get_template_directory_uri(); ?>/img/home/frontpage_registration.jpg" />
+						<a href="<?php echo get_home_url(); ?>/registration/">
+							<h3>Registration</h3>
+							<img src="<?php echo get_template_directory_uri(); ?>/img/home/frontpage_registration.jpg" />
+						</a>
 					</div>
 					<div class="col-lg-4">
-						<h3>Plan Your Trip</h3>
-						<img src="<?php echo get_template_directory_uri(); ?>/img/home/frontpage_plan.jpg" />
+						<a href="<?php echo get_home_url(); ?>/plan-your-trip/">
+							<h3>Plan Your Trip</h3>
+							<img src="<?php echo get_template_directory_uri(); ?>/img/home/frontpage_plan.jpg" />
+						</a>
 					</div>
 				</div>
 			</div>

@@ -16,9 +16,6 @@ get_header(); ?>
 		$about_image = get_field( "about_image" );
 		$about_title = get_field( "about_title" );
 		$about_introtext = get_field( "about_introtext" );
-
-							
-							
 	?>
 	<?php
 	if( $banner_image ) { ?>
@@ -210,9 +207,7 @@ get_header(); ?>
 
 					if( $link_to_the_next_page ) { ?>
 						<a class="about-page-link" href="<?php echo get_home_url().'/'.$link_to_the_next_page->post_name; ?>"><?php echo $link_to_the_next_page->post_title; ?> ></a>
-					<?php } ?>
-				
-				
+					<?php } ?>	
 				
 				<a href="<?php echo get_home_url(); ?>/registration">
 					<div class="button reg">
