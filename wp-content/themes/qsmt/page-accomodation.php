@@ -22,7 +22,7 @@ get_header(); ?>
 		</div>	 
 	<?php }	?>	
 
-	<div id="primary" class="content-area container-fluid">
+	<div id="inner-primary" class="content-area container-fluid">
 		<main id="main" class="site-main row" role="main">
 		
 			<div class="col-lg-2">
