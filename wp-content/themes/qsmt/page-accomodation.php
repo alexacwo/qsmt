@@ -57,22 +57,30 @@ get_header(); ?>
 									<?php echo $accomodation_text; ?>
 								<?php } ?>
 								
-								<div class="accomodation-buttons left">
+								<div class="accomodation-buttons left download-buttons">
 									<a href="<?php echo get_template_directory_uri(); ?>/download/QSMT_2017_symposium_program_download.pdf" download>
-										<div>
-											<span class="button accomodation-btn">
-												Download hotel registration form
-											</span>
+										<div class="button-table">
+											<div class="button-table-row">
+												<div class="button-table-cell">
+													<span class="button 1reg">														
+														Download hotel registration form
+													</span>
+												</div>
+											</div>
 										</div>
 									</a>
 								</div>
 								
-								<div class="accomodation-buttons right">
+								<div class="accomodation-buttons right download-buttons">
 									<a href="<?php echo get_template_directory_uri(); ?>/download/QSMT_2017_symposium_program_download.pdf" download>
-										<div>
-											<span class="button accomodation-btn">
-												Click here to make a reservation
-											</span>
+										<div class="button-table">
+											<div class="button-table-row">
+												<div class="button-table-cell">
+													<span class="button 1reg">			
+														Click here to make a reservation
+													</span>
+												</div>
+											</div>
 										</div>
 									</a>
 								</div> 
@@ -88,22 +96,30 @@ get_header(); ?>
 									<?php echo $intercontinental_hotel_text; ?>
 								<?php } ?> 
 								
-								<div class="accomodation-buttons left">
+								<div class="accomodation-buttons left download-buttons">
 									<a href="<?php echo get_template_directory_uri(); ?>/download/QSMT_2017_symposium_program_download.pdf" download>
-										<div>
-											<span class="button accomodation-btn">
-												Download hotel registration form
-											</span>
+										<div class="button-table">
+											<div class="button-table-row">
+												<div class="button-table-cell">
+													<span class="button 1reg">			
+														Download hotel registration form
+													</span>
+												</div>
+											</div>
 										</div>
 									</a>
 								</div>
 								
-								<div class="accomodation-buttons right">
+								<div class="accomodation-buttons right download-buttons">
 									<a href="<?php echo get_template_directory_uri(); ?>/download/QSMT_2017_symposium_program_download.pdf" download>
-										<div>
-											<span class="button accomodation-btn">
+										<div class="button-table">
+											<div class="button-table-row">
+												<div class="button-table-cell">
+													<span class="button 1reg">			
 												Click here to make a reservation
-											</span>
+													</span>
+												</div>
+											</div>
 										</div>
 									</a>
 								</div> 
@@ -143,7 +159,7 @@ get_header(); ?>
 		<div class="row">
 			<div class="col-lg-2">
 			</div>
-			<div class="col-lg-8">	 
+			<div class="col-lg-8 download-buttons">	 
 			
 				<?php if( $link_to_the_next_page ) { ?>
 					<a class="about-page-link" href="<?php echo get_home_url().'/'.$link_to_the_next_page->post_name; ?>"><?php echo $link_to_the_next_page->post_title; ?> ></a>
@@ -152,10 +168,14 @@ get_header(); ?>
 				<br>
 
 				<a href="<?php echo get_home_url(); ?>/registration">
-					<div style="margin-top:55px;">
-						<span class="button reg">
-							Registration
-						</span>
+					<div class="button-table">
+						<div class="button-table-row">
+							<div class="button-table-cell">
+								<span class="button 1reg">		
+									Registration
+								</span>
+							</div>
+						</div>
 					</div>
 				</a>
 

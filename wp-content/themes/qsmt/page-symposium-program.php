@@ -21,7 +21,7 @@ get_header(); ?>
 		</div>	 
 	<?php }	?>	
 
-	<div id="primary" class="content-area container-fluid">
+	<div id="inner-primary" class="content-area container-fluid">
 		<main id="main" class="site-main row" role="main">
 		
 			<div class="col-lg-2">
@@ -46,300 +46,609 @@ get_header(); ?>
 						</div>
 					</div>	
 					
-					<div class="program-table-row border-top">
+					<div class="program-table-row border-top padding-bottom">						
 						<div class="program-table-head-cell date">
-							Friday
-							<br>06 January 2017
+							<div class="title">
+								Date
+							</div>
+							<div class="text">
+								Friday
+								<br>06 January 2017
+							</div>
+							<div class="clearfix"></div>
 						</div>
 						
 						<div class="program-table-head-cell events">
-							<br>
-							Registration opens
+							<div class="title">
+								Events
+							</div>
+							<div class="text">
+								<div class="line-break"><br></div>
+								<strong>Registration opens</strong>
+							</div>
+							<div class="clearfix"></div>
 						</div>
 						
 						<div class="program-table-head-cell venue">
-							<br>
-							Intercontinental Hotel
+							<div class="title">
+								Venue
+							</div>
+							<div class="text">
+								<div class="line-break"><br></div>
+								<strong>Intercontinental Hotel</strong>
+							</div>
+							<div class="clearfix"></div>
 						</div>
 					</div>
 					
-					<div class="program-table-row border-top">
+					<div class="program-table-row border-top padding-bottom">		
 						<div class="program-table-head-cell date">
-							Saturday
-							<br>07 January 2017
+							<div class="title">
+								Date
+							</div>
+							<div class="text">
+								Saturday
+								<br>07 January 2017
+							</div>
+							<div class="clearfix"></div>
 						</div>
 						
 						<div class="program-table-head-cell events">
-							<br>
-							Registration continues
+							<div class="title">
+								Events
+							</div>
+							<div class="text">							
+								<div class="line-break"><br></div>
+								<strong>Registration continues</strong>
+							</div>
+							<div class="clearfix"></div>
 						</div>
 						
 						<div class="program-table-head-cell venue">
-							<br>
-							Intercontinental Hotel
+							<div class="title">
+								Venue
+							</div>
+							<div class="text">							
+								<div class="line-break"><br></div>
+								Intercontinental Hotel
+							</div>
+							<div class="clearfix"></div>
 						</div>
 					</div>
 					
-					<div class="program-table-row">
-						<div class="program-table-head-cell date">
-							...
-						</div>
-						
-						<div class="program-table-head-cell events">
-							Optional pre-conference tours (own expense)
-						</div>
-						
-						<div class="program-table-head-cell venue">
-							Bangkok and environs
-						</div>
-					</div>
+					<?php
 					
-					<div class="program-table-row border-top">
-						<div class="program-table-head-cell date">
-							<h4>Day 1</h4>
+					if( have_rows('repeater_saturday_07_january') ) {						
+						while ( have_rows('repeater_saturday_07_january') ) {
 							
-							Sunday
-							<br>08 January 2017
-						</div>
+							the_row();
+							$repeater_saturday_07_january_time = get_sub_field('repeater_saturday_07_january_time');
+							$repeater_saturday_07_january_event = get_sub_field('repeater_saturday_07_january_event'); 
+							$repeater_saturday_07_january_venue = get_sub_field('repeater_saturday_07_january_venue'); ?> 
+							
+							<div class="program-table-row">
+								<div class="program-table-head-cell date">
+									<div class="time">
+										<?php echo ($repeater_saturday_07_january_time) ? $repeater_saturday_07_january_time : '&nbsp;'; ?>
+									</div>
+								</div>
+								
+								<div class="program-table-head-cell events">
+									<div class="title">
+										Events
+									</div>
+									<div class="text">
+										<div class="time">
+											<?php echo $repeater_saturday_07_january_time; ?>
+										</div>
+										<?php echo ($repeater_saturday_07_january_event) ? $repeater_saturday_07_january_event : '&nbsp;'; ?>
+									</div>
+									<div class="clearfix"></div>											
+								</div>
 						
-						<div class="program-table-head-cell events">
-							<br>
-							<br>
-							Registration continues
-						</div>
-						
-						<div class="program-table-head-cell venue">
-							<br>
-							<br>
-							Intercontinental Hotel
-						</div>
-					</div>
-					
-					<div class="program-table-row">
-						<div class="program-table-head-cell date">
-							...
-						</div>
-						
-						<div class="program-table-head-cell events">
-							...
-						</div>
-						
-						<div class="program-table-head-cell venue">
-							...
-						</div>
-					</div>
-					
-					<div class="program-table-row border-top">
-						<div class="program-table-head-cell date">
-							Day 2
-							<br>Monday
-							<br>09 January 2017
-						</div>
-						
-						<div class="program-table-head-cell events">
-							<br>
-							<br>
-							...
-						</div>
-						
-						<div class="program-table-head-cell venue">
-							<br>
-							<br>
-							...
-						</div>
-					</div>
-					
-					<div class="program-table-row">
-						<div class="program-table-head-cell date">
-							...
-						</div>
-						
-						<div class="program-table-head-cell events">
-							...
-						</div>
-						
-						<div class="program-table-head-cell venue">
-							...
-						</div>
-					</div>
+								<div class="program-table-head-cell venue">
+									<div class="title" style="<?php if (empty($repeater_saturday_07_january_venue)) echo 'display:none;'; ?>">
+										Venue
+									</div>
+									<div class="text" style="<?php if (empty($repeater_saturday_07_january_venue)) echo 'display:none;'; ?>">
+										<?php echo ($repeater_saturday_07_january_venue) ? $repeater_saturday_07_january_venue : '&nbsp;'; ?>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+							
+						<?php }					
+					} ?>
 					
 					<div class="program-table-row border-top">
 						<div class="program-table-head-cell date">
-							Day 3
-							<br>Tuesday
-							<br>10 January 2017
+							<div class="title">
+								Date
+							</div>
+							<div class="text">
+								<h4>Day 1</h4>
+								
+								Sunday
+								<br>08 January 2017
+							</div>
+							<div class="clearfix"></div>
 						</div>
 						
 						<div class="program-table-head-cell events">
-							<br>
-							<br>
-							...
+							<div class="title">
+								Events
+							</div>
+							<div class="text">											
+								<div class="line-break"><br></div>							
+								<div class="line-break"><br></div>
+								<strong>Registration continues</strong>
+							</div>
+							<div class="clearfix"></div>
 						</div>
 						
 						<div class="program-table-head-cell venue">
-							<br>
-							<br>
-							...
+							<div class="title">
+								Venue
+							</div>
+							<div class="text">												
+								<div class="line-break"><br></div>							
+								<div class="line-break"><br></div>
+								Intercontinental Hotel
+							</div>
+							<div class="clearfix"></div>
 						</div>
-					</div>
+					</div>	
 					
-					<div class="program-table-row">
-						<div class="program-table-head-cell date">
-							...
-						</div>
-						
-						<div class="program-table-head-cell events">
-							...
-						</div>
-						
-						<div class="program-table-head-cell venue">
-							...
-						</div>
-					</div>
+					<?php
 					
-					<div class="program-table-row border-top">
-						<div class="program-table-head-cell date">
-							Day 4
-							<br>Wednesday
-							<br>11 January 2017
-						</div>
+					if( have_rows('repeater_sunday_08_january') ) {						
+						while ( have_rows('repeater_sunday_08_january') ) {
+							
+							the_row();
+							$repeater_sunday_08_january_time = get_sub_field('repeater_sunday_08_january_time');
+							$repeater_sunday_08_january_event = get_sub_field('repeater_sunday_08_january_event'); 
+							$repeater_sunday_08_january_venue = get_sub_field('repeater_sunday_08_january_venue'); ?> 
+							
+							<div class="program-table-row">
+								<div class="program-table-head-cell date">
+									<div class="time">
+										<?php echo ($repeater_sunday_08_january_time) ? $repeater_sunday_08_january_time : '&nbsp;'; ?>
+									</div>
+								</div>
+								
+								<div class="program-table-head-cell events">
+									<div class="title">
+										Events
+									</div>
+									<div class="text">
+										<div class="time">
+											<?php echo $repeater_sunday_08_january_time; ?>
+										</div>
+										<?php echo ($repeater_sunday_08_january_event) ? $repeater_sunday_08_january_event : '&nbsp;'; ?>
+									</div>
+									<div class="clearfix"></div>											
+								</div>
 						
-						<div class="program-table-head-cell events">
-							<br>
-							<br>
-							...
-						</div>
-						
-						<div class="program-table-head-cell venue">
-							<br>
-							<br>
-							...
-						</div>
-					</div>
-					
-					<div class="program-table-row">
-						<div class="program-table-head-cell date">
-							...
-						</div>
-						
-						<div class="program-table-head-cell events">
-							...
-						</div>
-						
-						<div class="program-table-head-cell venue">
-							...
-						</div>
-					</div>
-					
-					<div class="program-table-row border-top">
-						<div class="program-table-head-cell date">
-							Day 5
-							<br>Thursday
-							<br>12 January 2017
-						</div>
-						
-						<div class="program-table-head-cell events">
-							<br>
-							<br>
-							...
-						</div>
-						
-						<div class="program-table-head-cell venue">
-							<br>
-							<br>
-							...
-						</div>
-					</div>
-					
-					<div class="program-table-row">
-						<div class="program-table-head-cell date">
-							...
-						</div>
-						
-						<div class="program-table-head-cell events">
-							...
-						</div>
-						
-						<div class="program-table-head-cell venue">
-							...
-						</div>
-					</div>
+								<div class="program-table-head-cell venue">
+									<div class="title" style="<?php if (empty($repeater_sunday_08_january_venue)) echo 'display:none;'; ?>">
+										Venue
+									</div>
+									<div class="text" style="<?php if (empty($repeater_sunday_08_january_venue)) echo 'display:none;'; ?>">
+										<?php echo ($repeater_sunday_08_january_venue) ? $repeater_sunday_08_january_venue : '&nbsp;'; ?>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+							
+						<?php }					
+					} ?>	
 					
 					<div class="program-table-row border-top">
 						<div class="program-table-head-cell date">
-							Day 6
-							<br>Friday
-							<br>13 January 2017
+							<div class="title">
+								Date
+							</div>
+							<div class="text">
+								<h4>Day 2</h4>
+								
+								Monday
+								<br>09 January 2017
+							</div>
+							<div class="clearfix"></div>
 						</div>
 						
-						<div class="program-table-head-cell events">
-							<br>
-							<br>
+						<div class="program-table-head-cell events hidden-xs hidden-sm">
 						</div>
 						
-						<div class="program-table-head-cell venue">
-							<br>
-							<br>
+						<div class="program-table-head-cell venue hidden-xs hidden-sm">
 						</div>
-					</div>
+					</div>	
 					
-					<div class="program-table-row">
-						<div class="program-table-head-cell date">
-							...
-						</div>
+					<?php
+					
+					if( have_rows('repeater_monday_09_january') ) {						
+						while ( have_rows('repeater_monday_09_january') ) {
+							
+							the_row();
+							$repeater_monday_09_january_time = get_sub_field('repeater_monday_09_january_time');
+							$repeater_monday_09_january_event = get_sub_field('repeater_monday_09_january_event'); 
+							$repeater_monday_09_january_venue = get_sub_field('repeater_monday_09_january_venue'); ?> 
+							
+							<div class="program-table-row">
+								<div class="program-table-head-cell date">
+									<div class="time">
+										<?php echo ($repeater_monday_09_january_time) ? $repeater_monday_09_january_time : '&nbsp;'; ?>
+									</div>
+								</div>
+								
+								<div class="program-table-head-cell events">
+									<div class="title">
+										Events
+									</div>
+									<div class="text">
+										<div class="time">
+											<?php echo $repeater_monday_09_january_time; ?>
+										</div>
+										<?php echo ($repeater_monday_09_january_event) ? $repeater_monday_09_january_event : '&nbsp;'; ?>
+									</div>
+									<div class="clearfix"></div>											
+								</div>
 						
-						<div class="program-table-head-cell events">
-							...
-						</div>
-						
-						<div class="program-table-head-cell venue">
-							...
-						</div>
-					</div>
+								<div class="program-table-head-cell venue">
+									<div class="title" style="<?php if (empty($repeater_monday_09_january_venue)) echo 'display:none;'; ?>">
+										Venue
+									</div>
+									<div class="text" style="<?php if (empty($repeater_monday_09_january_venue)) echo 'display:none;'; ?>">
+										<?php echo ($repeater_monday_09_january_venue) ? $repeater_monday_09_january_venue : '&nbsp;'; ?>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+							
+						<?php }					
+					} ?>
 					
 					<div class="program-table-row border-top">
 						<div class="program-table-head-cell date">
-							Day 7-11
-							<br>Friday
-							<br>13 January-
-							<br>Tuesday
-							<br>17 January 2017
+							<div class="title">
+								Date
+							</div>
+							<div class="text">
+								<h4>Day 3</h4>
+								
+								Tuesday
+								<br>10 January 2017
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						
+						<div class="program-table-head-cell events hidden-xs hidden-sm">
+						</div>
+						
+						<div class="program-table-head-cell venue hidden-xs hidden-sm">
+						</div>
+					</div>	
+					
+					<?php
+					
+					if( have_rows('repeater_tuesday_10_january') ) {						
+						while ( have_rows('repeater_tuesday_10_january') ) {
+							
+							the_row();
+							$repeater_tuesday_10_january_time = get_sub_field('repeater_tuesday_10_january_time');
+							$repeater_tuesday_10_january_event = get_sub_field('repeater_tuesday_10_january_event'); 
+							$repeater_tuesday_10_january_venue = get_sub_field('repeater_tuesday_10_january_venue'); ?> 
+							
+							<div class="program-table-row">
+								<div class="program-table-head-cell date">
+									<div class="time">
+										<?php echo ($repeater_tuesday_10_january_time) ? $repeater_tuesday_10_january_time : '&nbsp;'; ?>
+									</div>
+								</div>
+								
+								<div class="program-table-head-cell events">
+									<div class="title">
+										Events
+									</div>
+									<div class="text">
+										<div class="time">
+											<?php echo $repeater_tuesday_10_january_time; ?>
+										</div>
+										<?php echo ($repeater_tuesday_10_january_event) ? $repeater_tuesday_10_january_event : '&nbsp;'; ?>
+									</div>
+									<div class="clearfix"></div>											
+								</div>
+						
+								<div class="program-table-head-cell venue">
+									<div class="title" style="<?php if (empty($repeater_tuesday_10_january_venue)) echo 'display:none;'; ?>">
+										Venue
+									</div>
+									<div class="text" style="<?php if (empty($repeater_tuesday_10_january_venue)) echo 'display:none;'; ?>">
+										<?php echo ($repeater_tuesday_10_january_venue) ? $repeater_tuesday_10_january_venue : '&nbsp;'; ?>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+							
+						<?php }					
+					} ?>	
+					
+					<div class="program-table-row border-top">
+						<div class="program-table-head-cell date">
+							<div class="title">
+								Date
+							</div>
+							<div class="text">
+								<h4>Day 4</h4>
+								
+								Wednesday
+								<br>11 January 2017
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						
+						<div class="program-table-head-cell events hidden-xs hidden-sm">
+						</div>
+						
+						<div class="program-table-head-cell venue hidden-xs hidden-sm">
+						</div>
+					</div>						
+					
+					<?php
+					
+					if( have_rows('repeater_wednesday_11_january') ) {						
+						while ( have_rows('repeater_wednesday_11_january') ) {
+							
+							the_row();
+							$repeater_wednesday_11_january_time = get_sub_field('repeater_wednesday_11_january_time');
+							$repeater_wednesday_11_january_event = get_sub_field('repeater_wednesday_11_january_event'); 
+							$repeater_wednesday_11_january_venue = get_sub_field('repeater_wednesday_11_january_venue'); ?> 
+							
+							<div class="program-table-row">
+								<div class="program-table-head-cell date">
+									<div class="time">
+										<?php echo ($repeater_wednesday_11_january_time) ? $repeater_wednesday_11_january_time : '&nbsp;'; ?>
+									</div>
+								</div>
+								
+								<div class="program-table-head-cell events">
+									<div class="title">
+										Events
+									</div>
+									<div class="text">
+										<div class="time">
+											<?php echo $repeater_wednesday_11_january_time; ?>
+										</div>
+										<?php echo ($repeater_wednesday_11_january_event) ? $repeater_wednesday_11_january_event : '&nbsp;'; ?>
+									</div>
+									<div class="clearfix"></div>											
+								</div>
+						
+								<div class="program-table-head-cell venue">
+									<div class="title" style="<?php if (empty($repeater_wednesday_11_january_venue)) echo 'display:none; '; ?>">
+										Venue
+									</div>
+									<div class="text" style="<?php if (empty($repeater_wednesday_11_january_venue)) echo 'display:none; '; ?>">
+										<?php echo ($repeater_wednesday_11_january_venue) ? $repeater_wednesday_11_january_venue : '&nbsp;'; ?>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+							
+						<?php }					
+					} ?>
+					
+					<div class="program-table-row border-top">
+						<div class="program-table-head-cell date">
+							<div class="title">
+								Date
+							</div>
+							<div class="text">
+								<h4>Day 5</h4>
+								
+								Thursday
+								<br>12 January 2017
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						
+						<div class="program-table-head-cell events hidden-xs hidden-sm">
+						</div>
+						
+						<div class="program-table-head-cell venue hidden-xs hidden-sm">
+						</div>
+					</div>						
+					
+					<?php
+					
+					if( have_rows('repeater_thursday_12_january') ) {						
+						while ( have_rows('repeater_thursday_12_january') ) {
+							
+							the_row();
+							$repeater_thursday_12_january_time = get_sub_field('repeater_thursday_12_january_time');
+							$repeater_thursday_12_january_event = get_sub_field('repeater_thursday_12_january_event'); 
+							$repeater_thursday_12_january_venue = get_sub_field('repeater_thursday_12_january_venue'); ?>
+							
+							<div class="program-table-row">
+								<div class="program-table-head-cell date">
+									<div class="time">
+										<?php echo ($repeater_thursday_12_january_time) ? $repeater_thursday_12_january_time : '&nbsp;'; ?>
+									</div>
+								</div>
+								
+								<div class="program-table-head-cell events">
+									<div class="title">
+										Events
+									</div>
+									<div class="text">
+										<div class="time">
+											<?php echo $repeater_thursday_12_january_time; ?>
+										</div>
+										<?php echo ($repeater_thursday_12_january_event) ? $repeater_thursday_12_january_event : '&nbsp;'; ?>
+									</div>
+									<div class="clearfix"></div>											
+								</div>
+						
+								<div class="program-table-head-cell venue">
+									<div class="title" style="<?php if (empty($repeater_thursday_12_january_venue)) echo 'display:none;'; ?>">
+										Venue
+									</div>
+									<div class="text" style="<?php if (empty($repeater_thursday_12_january_venue)) echo 'display:none;'; ?>">
+										<?php echo ($repeater_thursday_12_january_venue) ? $repeater_thursday_12_january_venue : '&nbsp;'; ?>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+							
+						<?php }					
+					} ?>
+					
+					<div class="program-table-row border-top">
+						<div class="program-table-head-cell date">
+							<div class="title">
+								Date
+							</div>
+							<div class="text">
+								<h4>Day 6</h4>
+								
+								Friday
+								<br>13 January 2017
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						
+						<div class="program-table-head-cell events hidden-xs hidden-sm">
+						</div>
+						
+						<div class="program-table-head-cell venue hidden-xs hidden-sm">
+						</div>
+					</div>					
+					
+					<?php
+					
+					if( have_rows('repeater_friday_13_january') ) {						
+						while ( have_rows('repeater_friday_13_january') ) {
+							
+							the_row();
+							$repeater_friday_13_january_time = get_sub_field('repeater_friday_13_january_time');
+							$repeater_friday_13_january_event = get_sub_field('repeater_friday_13_january_event'); 
+							$repeater_friday_13_january_venue = get_sub_field('repeater_friday_13_january_venue'); ?> 
+							
+							<div class="program-table-row">
+								<div class="program-table-head-cell date">
+									<div class="time">
+										<?php echo ($repeater_friday_13_january_time) ? $repeater_friday_13_january_time : '&nbsp;'; ?>
+									</div>
+								</div>
+								
+								<div class="program-table-head-cell events">
+									<div class="title">
+										Events
+									</div>
+									<div class="text">
+										<div class="time">
+											<?php echo $repeater_friday_13_january_time; ?>
+										</div>
+										<?php echo ($repeater_friday_13_january_event) ? $repeater_friday_13_january_event : '&nbsp;'; ?>
+									</div>
+									<div class="clearfix"></div>											
+								</div>
+						
+								<div class="program-table-head-cell venue">
+									<div class="title" style="<?php if (empty($repeater_friday_13_january_venue)) echo 'display:none;'; ?>">
+										Venue
+									</div>
+									<div class="text" style="<?php if (empty($repeater_friday_13_january_venue)) echo 'display:none;'; ?>">
+										<?php echo ($repeater_friday_13_january_venue) ? $repeater_friday_13_january_venue : '&nbsp;'; ?>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+							
+						<?php }					
+					} ?>
+					
+					<div class="program-table-row border-top">
+						<div class="program-table-head-cell date">
+							<div class="title">
+								Date
+							</div>
+							<div class="text">
+								<h4>Day 7-11</h4>
+								
+								Friday
+								<br>13 January-
+								<br>Tuesday
+								<br>17 January 2017
+							</div>
+							<div class="clearfix"></div>
 						</div>
 						
 						<div class="program-table-head-cell events">
-							<br>
-							Post-conference tour to northern Thailand: Chiang Mai, Chiang Rai, Nan, Lamphun, Hill Tribes
+							<div class="title">
+								Events
+							</div>
+							<div class="text">							
+								<div class="line-break"><br></div>
+								Post-conference tour to northern Thailand: Chiang Mai, Chiang Rai, Nan, Lamphun, Hill Tribes
+							</div>
+							<div class="clearfix"></div>
 						</div>
 						
 						<div class="program-table-head-cell venue">
-							<br>
-							Northern Thailand
+							<div class="title">
+								Venue
+							</div>
+							<div class="text">						
+								<div class="line-break"><br></div>
+								Northern Thailand
+							</div>
+							<div class="clearfix"></div>
 						</div>
 					</div>
 					
 					<div class="program-table-row border-top border-bottom">
 						<div class="program-table-head-cell date">
-							Day 11-14
-							<br>Tuesday
-							<br>17 January-
-							<br>Friday
-							<br>20 January 2017
+							<div class="title">
+								Date
+							</div>
+							<div class="text">
+								<h4>Day 11-14</h4>
+								
+								Tuesday
+								<br>17 January-
+								<br>Friday
+								<br>20 January 2017
+							</div>
+							<div class="clearfix"></div>
 						</div>
 						
 						<div class="program-table-head-cell events">
-							<br>
-							Opational post-conference tour extension to northeastern Thailand (Isaan): Surin, Chonnabot, Khon Kaen, and environs.
+							<div class="title">
+								Events
+							</div>
+							<div class="text">							
+								<div class="line-break"><br></div>
+								Optional post-conference tour extension to northeastern Thailand (Isaan): Surin, Chonnabot, Khon Kaen, and environs.
+							</div>
+							<div class="clearfix"></div>
 						</div>
 						
 						<div class="program-table-head-cell venue">
-							<br>
+							<div class="title">
+								Venue
+							</div>
+							<div class="text">					
+							<div class="line-break"><br></div>
 							Northeastern Thailand
+							</div>
+							<div class="clearfix"></div>
 						</div>
 					</div>
 					
 					<div class="clearfix"></div>
 					
-					<div style="margin-bottom: 95px;">Times subject to change; lunch and site visits included with registration days 2-6</div>
+					<div class="time-note">Times subject to change; lunch and site visits included with registration days 2-6</div>
 				
 			</div>
 			<div class="col-lg-2">
@@ -352,13 +661,17 @@ get_header(); ?>
 		<div class="row">
 			<div class="col-lg-2">
 			</div>
-			<div class="col-lg-8">							
+			<div class="col-lg-8 download-buttons">							
 				
 				<a href="<?php echo get_template_directory_uri(); ?>/download/QSMT_2017_symposium_program_download.pdf" download>
-					<div style="margin-bottom:55px;">
-						<span class="button reg">
-							Download the program
-						</span>
+					<div class="button-table" style="margin-bottom:55px;">
+						<div class="button-table-row">
+							<div class="button-table-cell">
+								<span class="button 1reg">
+									Download the program
+								</span>
+							</div>
+						</div>
 					</div>
 				</a>
 
@@ -367,10 +680,14 @@ get_header(); ?>
 				<br>
 
 				<a href="<?php echo get_home_url(); ?>/registration">
-					<div style="margin-top:55px;">
-						<span class="button reg">
-							Registration
-						</span>
+					<div class="button-table" style="margin-top:55px;">
+						<div class="button-table-row">
+							<div class="button-table-cell">
+								<span class="button 1reg">
+									Registration
+								</span>
+							</div>
+						</div>
 					</div>
 				</a>
 

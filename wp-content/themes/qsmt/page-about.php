@@ -18,10 +18,9 @@ get_header(); ?>
 		$about_introtext = get_field( "about_introtext" );
 	?>
 	<?php
-	if( $banner_image ) { ?>
-		
-			<div id="masthead" class="about-banner" role="banner" style="background: url('<?php echo $banner_image; ?>">		
-			</div>	 
+	if( $banner_image ) { ?>	
+		<div id="masthead" class="about-banner" role="banner" style="background: url('<?php echo $banner_image; ?>">		
+		</div>	 
 	<?php }	?>
 	
 
@@ -30,13 +29,13 @@ get_header(); ?>
 		
 			<div class="col-lg-2">
 			</div>
-			<div class="col-lg-8">
+			<div id="main-content" class="col-lg-8">
 
 					<h2 class="entry-header"> 
 						<?php if( $about_title ) echo $about_title; ?>
 					</h2>					
 					
-					<div class="col-lg-8" style="padding: 0px;">
+					<div class="col-lg-8">
 					
 						<?php if( $about_introtext ) echo $about_introtext; ?>
 						
@@ -142,7 +141,7 @@ get_header(); ?>
 						}	?>
 						
 					</div>
-					<div class="col-lg-4" style="padding: 0px;">
+					<div class="col-lg-4">
 
 						<?php	if( $about_image ) { ?>
 								<img src="<?php echo $about_image; ?>" alt="<?php if( $about_title ) echo $about_title; ?>" />

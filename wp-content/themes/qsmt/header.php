@@ -54,7 +54,7 @@
 									event.preventDefault();
 									
 									//jQuery('.menu').();
-									jQuery('.menu li').slideToggle();
+									jQuery('#site-navigation #menu-primary>li').slideToggle();
 								});  
 								 
 								/* jQuery( '#menu-primary>li').hover(function () {
