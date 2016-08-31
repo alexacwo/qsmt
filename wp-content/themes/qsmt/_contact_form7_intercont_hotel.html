@@ -1,0 +1,212 @@
+<div class="reservation-form-header italic">
+	Inside Out/Outside In
+	Clothing, Cloth and the Meeting of Cultures
+	8-13 January 2017
+</div>
+<div class="reservation-form-header">
+	INTERCONTINENTAL BANGKOK HOTEL RESERVATION FORM
+</div>
+Please note: all fields marked with an asterisk (*) are required.
+
+<h2>NAME OF GUEST</h2>
+
+<div class="form-row">
+	<div class="width-15">
+	</div>
+	<div class="width-35">
+		[checkbox customer_title class:customer_title "Mr." "Mrs." "Ms." "Dr."]
+	</div>
+	<div class="width-50">
+	</div>
+</div>
+
+<div class="form-row">
+	<div class="width-15">
+		* First name:
+	</div>
+	<div class="width-35 input">
+		[text* first_name class:first_name]
+	</div>
+	<div class="width-15">
+		* Family name:
+	</div>
+	<div class="width-35 input">
+		[text* family_name class:family_name]
+	</div>
+</div>
+
+<div class="form-row">
+	<div class="width-15">
+		Organisation:
+	</div>
+	<div class="width-35 input">
+		[text organisation class:organisation]
+	</div>
+	<div class="width-15">
+		Position:
+	</div>
+	<div class="width-35 input">
+		[text position class:position]
+	</div>
+</div>
+
+<div class="form-row">
+	<div class="width-15">
+		*Email:
+	</div>
+	<div class="width-35 input">
+		[email* email class:email]
+	</div>
+	<div class="width-15">
+		Alternate email:
+	</div>
+	<div class="width-35 input">
+		[email alternate_email class:alternate_email]
+	</div>
+</div>
+
+<div class="form-row">
+	<div class="width-15">
+		Tel (including country code):
+	</div>
+	<div class="width-35 input">
+		[tel tel class:tel]
+	</div>
+	<div class="width-15">
+		Fax:
+	</div>
+	<div class="width-35 input">
+		[tel fax class:fax]
+	</div>
+</div>
+
+<div class="form-row">
+	<div class="width-33 input">
+		<label> *Date of Arrival: [date arrival_date class:arrival_date] </label>
+	</div>
+	<div class="width-33 input">
+		<label> *Date of Departure: [date departure_date class:departure_date] </label>
+	</div>
+	<div class="width-33 input">
+		<label> *Total number of nights: [number nights_number class:nights_number] </label>
+	</div>
+</div>
+
+<h2>ROOM TYPE: GRANDE DELUXE ROOM</h2>
+	
+<div class="form-row">
+	[checkbox occupancy class:occupancy "Single occupancy: THB 4,800++" "Double occupancy: THB 5,200++"]
+</div>
+
+++ Rates are subject to 10% service charge and 7.7% applicable government tax per room per night
+<ul>
+	<li>Rates are inclusive of international buffet breakfast at Espresso restaurant and free Wi-Fi in room</li>
+	<li>Rates are applicable for 3 days before and after the event dates, subject to availability upon your request.</li>
+</ul>
+
+<div class="form-row">
+	<div class="width-15">
+		Sharing with (Name):
+	</div>
+	<div class="width-85 input">
+		[text sharing_with_name class:sharing_with_name]
+	</div>
+</div>
+
+<div class="form-row">
+	[checkbox smoking class:smoking "Smoking" "Non-smoking"]
+</div>
+
+<div class="form-row">
+	<div class="width-15 input">
+		Bed type:
+	</div>
+	<div class="width-85">
+		[checkbox bed_type class:bed_type use_label_element "one bed" "two beds"]
+	</div>
+</div>
+
+<div class="form-row">
+	<div class="width-15">
+		Looking for a roommate. Please specify:
+	</div>
+	<div class="width-85 input">
+		[text looking_for_roommate class:looking_for_roommate]
+	</div>
+</div>
+
+<h2>RESERVATION GUARANTEE</h2>
+
+<div class="form-row">
+	<div class="width-15">
+		*Credit card number:
+	</div>
+	<div class="width-35 input">
+		[text credit_card_number class:credit_card_number]
+	</div>
+	<div class="width-15">
+		*Expiry date:
+	</div>
+	<div class="width-35 input">
+		[text expiry_date class:expiry_date]
+	</div>
+</div>
+
+<div class="form-row">
+	<div class="width-15">
+		*Name of cardholder:
+	</div>
+	<div class="width-85 input">
+		[text cardholder_name class:cardholder_name]
+	</div>
+</div>
+
+<ul>
+	<li>A credit card is required to guarantee your reservation at the time of booking. Cancellations can be made up to 15 days prior to scheduled arrival date with no penalty.</li>
+	<li>Cancellations made between 14 and 8 days prior to arrival will incur a penalty charge equivalent to one night's stay, which will be charged to your credit card.</li>
+	<li>Cancellations made less than 8 days prior to arrival date will incur a penalty charge equivalent to two night's stay, which will be charged to your credit card.</li>
+</ul>
+
+<h2>AIRPORT PICK-UP OR DROP-OFF (optional)</h2>
+	
+<div class="form-row">
+	<div class="width-33 input">
+		<label> Arrival Flight Number: [text arrival_flight_number class:arrival_flight_number]</label>
+	</div>
+	<div class="width-33 input">
+		<label> Arrival Time: [text arrival_flight_number class:arrival_flight_number]</label>
+	</div>
+	<div class="width-33 input">
+		<label> Date: [date airport_arrival_date class:airport_arrival_date] </label>
+	</div>
+</div>
+	
+<div class="form-row">
+	<div class="width-33 input">
+		<label> Departure Flight Number: [text departure_flight_number class:departure_flight_number]</label>
+	</div>
+	<div class="width-33 input">
+		<label> Departure Time: [text departure_flight_number class:departure_flight_number]</label>
+	</div>
+	<div class="width-33 input">
+		<label> Date: [date airport_departure_date class:airport_departure_date] </label>
+	</div>
+</div>
+
+<div class="form-row">
+	[radio airport_pickup_vehicle class:airport_pickup_vehicle "Benz S300 Class	THB 3,000 net per car per way (maximum 3 passengers)" "Benz Vito Van THB 3,500 net per van per way (maximum 5 passengers)"]
+</div>
+
+[radio oneway_roundtrip class:oneway_roundtrip "One way" "Round trip"]
+
+<ul>
+	<li>Airport transfer service is optional. If you wish to reserve a transfer at a later stage, please email the hotel at rsvngroupco@ihgbangkok.com with the subject line “Airport Transfers” at least 24 hours in advance of arrival or departure time.</li> 
+	<li>Changes to your reservation require a minimum of three hours advance notice. Late cancellation or no-show will incur charges of the full amount of limousine service requested, which will be applied to your credit card.</li>
+</ul>
+	
+Hotel reservations should be made no later than Thursday 1 December 2016.
+Hotel Contacts:
+-	Reservations Department E-mail: rsvngroupcohi@ihgbangkok.com • Tel: +66 2 656 1555 • Fax: +66 2 254 9988
+-	Ms. Thitiwan Sakdiarpa (Sales Manager) E-mail: Thitiwan@ihgbangkok.com • Tel: +66 2 656 1555 Ext. 6920 • Fax: +66 2 656 0994
+	
+<div class="contact-form-buttons"> <input type="reset" value="RESET" /> [submit "submit"]</div>

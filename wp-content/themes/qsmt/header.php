@@ -45,11 +45,10 @@
 						<a href="#" class="mobile-menu">
 							<img src="<?php echo get_template_directory_uri(); ?>/img/menu_ham.png" />
 						</a>
-						<script type="text/javascript" src="http://osvaldas.info/examples/drop-down-navigation-touch-friendly-and-responsive/doubletaptogo.min.js"></script>
 						<script>
 							jQuery( document ).ready(function() {
-									
-								//jQuery( '#site-navigation li:has(ul)' ).doubleTapToGo();
+								
+								
 								jQuery( '.mobile-menu').click(function (event) {
 									event.preventDefault();
 									

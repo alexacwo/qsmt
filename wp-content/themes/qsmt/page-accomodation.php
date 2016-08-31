@@ -72,7 +72,7 @@ get_header(); ?>
 								</div>
 								
 								<div class="accomodation-buttons right download-buttons">
-									<a href="<?php echo get_template_directory_uri(); ?>/download/QSMT_2017_symposium_program_download.pdf" download>
+									<a href="<?php echo get_home_url(); ?>/holiday-inn-hotel-reservation-form/">
 										<div class="button-table">
 											<div class="button-table-row">
 												<div class="button-table-cell">
@@ -111,12 +111,12 @@ get_header(); ?>
 								</div>
 								
 								<div class="accomodation-buttons right download-buttons">
-									<a href="<?php echo get_template_directory_uri(); ?>/download/QSMT_2017_symposium_program_download.pdf" download>
+									<a href="<?php echo get_home_url(); ?>/intercontinental-bangkok-hotel-reservation-form/">
 										<div class="button-table">
 											<div class="button-table-row">
 												<div class="button-table-cell">
 													<span class="button 1reg">			
-												Click here to make a reservation
+														Click here to make a reservation
 													</span>
 												</div>
 											</div>

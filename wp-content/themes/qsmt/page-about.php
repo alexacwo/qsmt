@@ -32,7 +32,7 @@ get_header(); ?>
 			<div id="main-content" class="col-lg-8">
 
 					<h2 class="entry-header"> 
-						<?php if( $about_title ) echo $about_title; ?>
+						 <?php if( $about_title ) echo $about_title; ?>
 					</h2>					
 					
 					<div class="col-lg-8">
@@ -201,7 +201,7 @@ get_header(); ?>
 		<div class="row">
 			<div class="col-lg-2">
 			</div>
-			<div class="col-lg-8">
+			<div class="col-lg-8 download-buttons">
 				<?php $link_to_the_next_page = get_field( "link_to_the_next_page" );
 
 					if( $link_to_the_next_page ) { ?>
@@ -209,8 +209,14 @@ get_header(); ?>
 					<?php } ?>	
 				
 				<a href="<?php echo get_home_url(); ?>/registration">
-					<div class="button reg">
-						Registration
+					<div class="button-table">
+						<div class="button-table-row">
+							<div class="button-table-cell">
+								<span class="button 1reg">		
+									Registration
+								</span>
+							</div>
+						</div>
 					</div>
 				</a>
 
