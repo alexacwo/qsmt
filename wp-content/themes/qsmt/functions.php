@@ -279,6 +279,8 @@ function qsmt_scripts() {
 	}
 
 	wp_enqueue_script( 'qsmt-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20160816', true );
+	
+	wp_enqueue_script( 'custom-script', get_template_directory_uri() . '/js/custom.js');
 
 	wp_localize_script( 'qsmt-script', 'screenReaderText', array(
 		'expand'   => __( 'expand child menu', 'qsmt' ),

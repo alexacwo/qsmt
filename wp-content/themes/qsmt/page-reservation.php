@@ -19,23 +19,34 @@ get_header(); ?>
 	if( $banner_image ) { ?>		
 		<div id="masthead" class="about-banner" role="banner" style="background: url('<?php echo $banner_image; ?>">		
 		</div>	 
-	<?php }	?>	
- 
-	<?php
+	<?php }	?>	 
+	<div id="reservation-primary" class="content-area container-fluid reservation-form">
+		<main id="main" class="site-main row" role="main">
+		
+			<div class="col-lg-2">
+			</div>
+			<div id="main-content" class="col-lg-8">
+			
+				<div class="col-lg-12">
+				
+					<?php 
+						while ( have_posts() ) : the_post();
+							the_content(); 
+						endwhile;
+					?>
+					
+				</div>
+				
+			</div>
+			<div class="col-lg-2">
+			</div>
+				
+		</main><!-- .site-main -->
+	</div>
 	
-	// Start the loop.
-	while ( have_posts() ) : the_post();
-
-		// Include the page content template.
-		get_template_part( 'template-parts/content', 'page' );
-
-		// If comments are open or we have at least one comment, load up the comment template.
-		if ( comments_open() || get_comments_number() ) {
-			comments_template();
-		}
-
-		// End of the loop.
-	endwhile;
-	?>
+	<div id="links" class="container-fluid">
+		<div class="row">
+		</div>
+	</div>
 	
 <?php get_footer(); ?>

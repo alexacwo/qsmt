@@ -15,6 +15,10 @@
 			</div>
 			<div id="main-content" class="col-lg-8">
 			
+				<h2 class="entry-header"> 
+					<?php the_title(); ?>
+				</h2>
+					
 				<div class="col-lg-12">
 					<?php the_content(); ?>
 				</div>

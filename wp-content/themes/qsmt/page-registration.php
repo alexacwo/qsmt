@@ -21,7 +21,7 @@ get_header(); ?>
 		</div>	 
 	<?php }	?>	
 
-	<div id="inner-primary" class="content-area container-fluid">
+	<div id="inner-primary" class="content-area container-fluid registration-page">
 		<main id="main" class="site-main row" role="main">
 		
 			<div class="col-lg-2">
@@ -31,6 +31,13 @@ get_header(); ?>
 					<h2 class="entry-header"> 
 						<?php the_title(); ?>
 					</h2>
+				
+					<?php 
+						while ( have_posts() ) : the_post();
+							the_content(); 
+						endwhile;
+					?>
+					
 					
 			</div>
 			<div class="col-lg-2">
