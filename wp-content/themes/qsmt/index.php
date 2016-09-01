@@ -97,7 +97,7 @@ get_header(); ?>
 						</a>
 					</div>
 					<div class="col-lg-4">
-						<a href="<?php echo get_home_url(); ?>/plan-your-trip/">
+						<a href="<?php echo get_home_url(); ?>/hotel-accomodation-and-airport-transfers/">
 							<h3>Plan Your Trip</h3>
 							<img src="<?php echo get_template_directory_uri(); ?>/img/home/frontpage_plan.jpg" />
 						</a>

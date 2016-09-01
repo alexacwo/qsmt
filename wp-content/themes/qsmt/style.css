@@ -1224,7 +1224,7 @@ div.wpcf7-response-output {
 	margin-bottom: 30px;
     margin-left: 0px;
 }
-.wpcf7 .oneway_roundtrip .wpcf7-list-item {
+.wpcf7 .oneway_roundtrip .wpcf7-list-item:first-child {
 	 margin-right: 100px;
  }
  .wpcf7 .registration_fees .wpcf7-list-item,
