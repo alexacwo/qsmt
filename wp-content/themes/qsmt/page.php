@@ -12,18 +12,18 @@
  */
 
 get_header(); ?>
+
+	<?php 
+		$banner_image = get_field( "banner_image" );	
+	?>
+	<?php
+	if( $banner_image ) { ?>	
+		<div id="masthead" class="about-banner" role="banner" style="background: url('<?php echo $banner_image; ?>">		
+		</div>	 
+	<?php }	?>
  
 	<?php
-$to      = 'spacerebels@gmail.com';
-$subject = 'the subject';
-$message = 'hello';
-$headers = 'From: webmaster@example.com' . "\r\n" .
-    'Reply-To: webmaster@example.com' . "\r\n" .
-    'X-Mailer: PHP/' . phpversion();
-
-mail($to, $subject, $message, $headers);
-
-		
+	
 	// Start the loop.
 	while ( have_posts() ) : the_post();
 

@@ -45,7 +45,7 @@ Please note: all fields marked with an asterisk (*) are required.
 		Affiliation
 	</div>
 	<div class="width-85 input">
-		[text* affiliation class:affiliation]
+		[text affiliation class:affiliation]
 	</div>
 </div>
 
@@ -87,6 +87,23 @@ Please note: all fields marked with an asterisk (*) are required.
 
 <div class="form-row">
 	<div class="width-15">
+		Dietary Requirement
+	</div>
+	<div class="width-85 input">
+		[checkbox dietary_requirement class:dietary_requirement "Vegetarian" "Vegan" "Halal" "Food Allergies (please specify)" "Other"]
+	</div>
+</div>
+
+<div class="food_allergies">
+	[text food_allergies class:food_allergies_text]
+</div>
+
+<div class="other_dietary_req">
+	[text other_dietary_req class:other_dietary_req]
+</div>
+
+<div class="form-row">
+	<div class="width-15">
 		ICOM membership
 	</div>
 	<div class="width-85 input">
@@ -96,16 +113,18 @@ Please note: all fields marked with an asterisk (*) are required.
 
 <h2>REGISTRATION FEES</h2>
 
-<div class="form-row">
-	[radio registration_fees class:registration_fees "Early Bird (received before 31 October 2016) - US$ 450 (THB 14,850)" "Regular (received 1 November - 20 December 2016) - US$ 550 (THB 18,000)" "Student Fee (received by 20 December 2016) - US$ 395 (THB 13,000)* 
-	*a copy of student I.D. must be submitted with registration" "Advance Single-Day Registration (received by 20 December 2016) - US$ 160 (THB 5,000)" "Single-day on-site Registration (without food, paper only) - US$ 80 (THB 2,500)"]
+<div class="form-row registration_fees">
+	<input type="radio" name="registration_fees" value="0"> Early Bird (received before 31 October 2016) - US$ 450 (THB 14,850)
+	<input type="radio" name="registration_fees" value="1"> Regular (received 1 November - 20 December 2016) - US$ 550 (THB 18,000)
+	<input type="radio" name="registration_fees" value="2"> Student Fee (received by 20 December 2016) - US$ 395 (THB 13,000)*
+	*a copy of student I.D. must be submitted with registration
+	<input type="radio" name="registration_fees" value="3"> Advance Single-Day Registration (received by 20 December 2016) - US$ 160 (THB 5,000)
 </div>
 
-<div class="form-row">
-	Single-Event Ticket (for spouse/accompanying person)
-	[checkbox single_event_ticket class:single_event_ticket "TBD"]
+<div class="form-row single_day_registration">	
+	[checkbox single_event_ticket class:single_event_ticket "9 Jan" "10 Jan" "11 Jan" "12 Jan" "13 Jan"]
 </div>
-	
+
 <div class="form-row">
 	Deadline for submission of registration form: 20 December 2016
 </div> 
@@ -114,60 +133,71 @@ Please note: all fields marked with an asterisk (*) are required.
 
 Confirmation of registration will be issued by e-mail or fax within 7 working days upon receipt of full payment. Late registrations are subject to availability.
 Cancellations received by 30 November 2016 will be refunded, less US$ 45 administration fee.
+<br>
 
 <div class="form-row">
 	[radio payment_method class:payment_method "Credit Card I hereby authorize Destination Services (Thailand) Co., Ltd. to debit my credit card account." "Bank Transfer: Please add bank processing fee of US$ 30, except within Thailand."]
 </div>
 
-<div class="form-row">
-	<div class="width-50">
-		[radio card_issuer class:card_issuer "Visa" "Master Card" "American Express"]
+<div class="credit-card-details">
+	<div class="form-row">
+		<div class="width-50">
+			[radio card_issuer class:card_issuer "Visa" "Master Card" "American Express"]
+		</div>
+		<div class="width-50 input">
+			<label> Issuing Bank: [text issuing_bank class:issuing_bank] </label>
+		</div>
 	</div>
-	<div class="width-50 input">
-		<label> Issuing Bank: [text issuing_bank class:issuing_bank] </label>
+
+	<div class="form-row">
+		<div class="width-15">
+			*Name of cardholder:
+		</div>
+		<div class="width-85 input">
+			[text cardholder_name class:cardholder_name]
+		</div>
+	</div>
+
+	<div class="form-row">
+		<div class="width-15">
+			Card Number:
+		</div>
+		<div class="width-35 input">
+			[text card_number class:card_number]
+		</div>
+		<div class="width-15">
+			3-digit (Visa, Master) / 4-digit (AMEX) CVV Number:
+		</div>
+		<div class="width-35 input">
+			[text cvv_number class:cvv_number]
+		</div>
+	</div>
+
+	<div class="form-row">
+		<div class="width-15">
+			Name on Card:
+		</div>
+		<div class="width-35 input">
+			[text cardholder_name class:cardholder_name]
+		</div>
+		<div class="width-15">
+			Expiry date:
+		</div>
+		<div class="width-35 input">
+			[text expiry_date class:expiry_date]
+		</div>
 	</div>
 </div>
 
-<div class="form-row">
-	<div class="width-15">
-		*Name of cardholder:
-	</div>
-	<div class="width-85 input">
-		[text cardholder_name class:cardholder_name]
-	</div>
+<div class="form-row bank-transfer-details">
+	Beneficiary Name: QSMTSYMPOSIUM		Account Number: 061-210862-6		SWIFT Code: SICOTHBK
+	Bank Information: Siam Commercial Bank PCL
+	Phra Barommaharajawang Branch, Nai Phra Barommaharajawang, Na Pralan Road, Phra Barommaharajawang, Phranakorn, Bangkok 10200, Thailand
 </div>
 
-<div class="form-row">
-	<div class="width-15">
-		Card Number:
-	</div>
-	<div class="width-35 input">
-		[text card_number class:card_number]
-	</div>
-	<div class="width-15">
-		3-digit (Visa, Master) / 4-digit (AMEX) CVV Number:
-	</div>
-	<div class="width-35 input">
-		[text cvv_number class:cvv_number]
-	</div>
-</div>
+<h2>PAYMENT SUMMARY</h2>
 
-<div class="form-row">
-	<div class="width-15">
-		Name on Card:
-	</div>
-	<div class="width-35 input">
-		[text cardholder_name class:cardholder_name]
-	</div>
-	<div class="width-15">
-		Expiry date:
-	</div>
-	<div class="width-35 input">
-		[text expiry_date class:expiry_date]
-	</div>
-</div>
-
-<div class="form-row">
+<div id="disabled" class="form-row">
 	<div class="width-15">
 		Amount:
 	</div>
@@ -182,19 +212,11 @@ Cancellations received by 30 November 2016 will be refunded, less US$ 45 adminis
 	</div>
 </div>
 
-<div class="form-row bank_transfer_jquery_field">
+<div class="form-row">
+	*Please attach the transfer slip together with the completed Registration Form.	
+	<br>
+	Upload attached student card: <span class="upload-button"><span>BROWSE</span>[file file-413 class:upload limit:50 filetypes:gif|png|jpg|jpeg|bmppdf]</span>
+	<span class="red">Please upload a .gif, .jpg, .jpeg, .png, .bmp or .pdf file</span>
 </div>
 
-Beneficiary Name: QSMTSYMPOSIUM		Account Number: 061-210862-6		SWIFT Code: SICOTHBK
-
-Bank Information: Siam Commercial Bank PCL
-Phra Barommaharajawang Branch, Nai Phra Barommaharajawang, Na Pralan Road, Phra Barommaharajawang, Phranakorn, Bangkok 10200, Thailand
-
-
-Upload attached student card:			No file selected.
-
-Please upload a .gif, .jpg, .jpeg, .png, .bmp or .pdf file
-
-*Please attach the transfer slip together with the completed Registration Form.
-	
 <div class="contact-form-buttons"> <input type="reset" value="RESET" /> [submit "submit"]</div>

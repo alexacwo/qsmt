@@ -36,7 +36,7 @@
 				
 					<div class="col-xs-12 col-sm-8 col-md-6 col-lg-5 col-xl-4 site-header-logos">
 						<div>
-						<img src="<?php echo get_template_directory_uri(); ?>/img/qsmt_logo.png" /></div><div><img src="<?php echo get_template_directory_uri(); ?>/img/com_costume.png" />
+						<a href="<?php echo get_home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/qsmt_logo.png" /></a></div><div><img src="<?php echo get_template_directory_uri(); ?>/img/com_costume.png" />
 						</div>
 					</div>
 					
@@ -45,37 +45,6 @@
 						<a href="#" class="mobile-menu">
 							<img src="<?php echo get_template_directory_uri(); ?>/img/menu_ham.png" />
 						</a>
-						<script>
-							jQuery( document ).ready(function() {
-								
-								
-								jQuery( '.mobile-menu').click(function (event) {
-									event.preventDefault();
-									
-									//jQuery('.menu').();
-									jQuery('#site-navigation #menu-primary>li').slideToggle();
-								});  
-								 
-								/* jQuery( '#menu-primary>li').hover(function () {
-									clearTimeout(jQuery.data(this,'timer'));
-									jQuery('ul',this).stop(true,true).slideDown(200);
-								}, function () {
-									jQuery.data(this,'timer', setTimeout(jQuery.proxy(function() {
-										jQuery('ul',this).stop(true,true).slideUp(200);
-									}, this), 100));
-								}); */ 
-								
-								 jQuery( '#menu-primary>li').hover(function ( ) {  
-									clearTimeout(jQuery.data(this,'timer'));
-									jQuery('ul',this).stop(true,true).slideDown(200);
-								}, function ( ) { 
-									event.preventDefault();
-									jQuery.data(this,'timer', setTimeout(jQuery.proxy(function() {
-										jQuery('ul',this).stop(true,true).slideUp(200);
-									}, this), 100));
-								});    
-							});
-						</script>
 						
 						<div class="menu">
 							<?php

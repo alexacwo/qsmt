@@ -22,13 +22,18 @@ body
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
     display: block;
 }
+select {
+	border: none;
+}
 a,
 a:hover,
 a:active,
 a:focus {
 	text-decoration: none !important;
 }
-
+.red {
+	color: red;
+}
 /* Header */
 
 header {
@@ -283,7 +288,7 @@ header {
 		padding-left: 30px;
 	}
 	#menu-primary>li>.sub-menu>li a {
-		padding-left: 40px;
+		padding-left: 25px;
 	}
 }
 /* Menu Primary Sub-Menus */
@@ -1056,6 +1061,42 @@ footer.footer .facebook:hover{
 		margin-bottom: 0px;
 	}
 }
+
+/* Content - Registration */
+
+.registration-page {
+	font-size: 15px;
+}
+.registration-page h2 {
+	font-size: 25px;
+	color: #B39659;
+	margin-bottom: 30px;
+}
+.registration-page hr {
+    border-top: 1px solid #B39659;
+}
+@media (min-width: 768px) {
+	.registration-page .dates-title {
+		margin-right: 180px;
+	}
+}
+@media (max-width: 767px) {
+	.registration-page .dates-title {
+		display: block;
+	}
+}
+.registration-page hr:first-of-type {
+    margin-top: 30px;
+}
+.registration-page hr:last-of-type {
+	margin-bottom: 30px;
+}
+
+/* Content - Pre-Conference-Tour */
+
+.pre-conference-tour .day-2 {
+	display: none;
+}
 /* Contact Form */
 
 .reservation-form {
@@ -1199,13 +1240,33 @@ div.wpcf7-response-output {
 	float:right;
 }
 .wpcf7 .contact-form-buttons input[type=submit],
-.wpcf7 .contact-form-buttons input[type=reset] {
+.wpcf7 .contact-form-buttons input[type=reset],
+.wpcf7 .upload-button span:first-of-type {
 	width:105px;
 	height: 55px;
 	text-transform: uppercase;
 	border: none;
 	color: #fff;
 	background-color: #B39659;
+    display: inline-block;
+    padding: 15px;
+	text-align: center;
+}
+.wpcf7 .upload-button {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+.wpcf7 .upload-button input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
 }
 .wpcf7 .bed_type .wpcf7-list-item {
 	display: inline-block;
@@ -1224,12 +1285,34 @@ div.wpcf7-response-output {
 	margin-bottom: 30px;
     margin-left: 0px;
 }
-.wpcf7 .oneway_roundtrip .wpcf7-list-item {
+.wpcf7 .oneway_roundtrip .wpcf7-list-item:first-child {
 	 margin-right: 100px;
  }
  .wpcf7 .registration_fees .wpcf7-list-item,
  .wpcf7 .payment_method .wpcf7-list-item {	
     display: block;
+}
+.wpcf7 .credit-card-details,
+.wpcf7 .bank-transfer-details,
+.wpcf7 .single_day_registration,
+.wpcf7 .food_allergies,
+.wpcf7 .other_dietary_req {
+	display: none;
+}
+.wpcf7 .dietary_requirement .last {	
+    display: block;
+    margin-top: 20px;
+}
+.wpcf7 div.food_allergies,
+.wpcf7 div.other_dietary_req {
+	display: inline-block !important;
+}
+.wpcf7 span.food_allergies,
+.wpcf7 span.other_dietary_req {
+	margin-left: 5px;
+}
+.wpcf7 .dietary_requirement input {
+	width: auto !important;
 }
 .clearfix {
 	clear: both;
