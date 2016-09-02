@@ -1,0 +1,9 @@
+1. Pages: Symposium program
+2. Template File: QSMT: Symposium Program Page Template (page-symposium-program.php)
+3. File: QSMT: Theme Footer (footer.php)
+4. Pages: Visitor information
+5. Pages: Hotel Accomodation and Airport Transfers
+6. Template: QSMT: Accomodation Page Template (page-accomodation.php)
+7. Pages: About the conference venue
+8. Pages: Exhibitions
+9: Template: QSMT: About Pages Page Template (page-about.php)

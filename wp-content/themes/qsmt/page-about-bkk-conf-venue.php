@@ -103,7 +103,7 @@ get_header(); ?>
 				<?php $link_to_the_next_page = get_field( "link_to_the_next_page" );
 
 					if( $link_to_the_next_page ) { ?>
-						<a class="about-page-link" href="<?php echo get_home_url().'/'.$link_to_the_next_page->post_name; ?>"><?php echo $link_to_the_next_page->post_title; ?> ></a>
+						<strong><a class="about-page-link" href="<?php echo get_home_url().'/'.$link_to_the_next_page->post_name; ?>"><?php echo $link_to_the_next_page->post_title; ?> ></a></strong>
 					<?php } ?>	
 				
 				<a href="<?php echo get_home_url(); ?>/registration">

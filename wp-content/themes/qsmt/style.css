@@ -23,7 +23,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     display: block;
 }
 select {
-	border: none;
+	/*border: none;*/
 }
 a,
 a:hover,
@@ -553,6 +553,7 @@ h2.entry-header {
 .about-page-link {
 	text-transform: uppercase;
 	color: #B4975A;
+	font-weight: bold;
 }
 .about-page-link:hover {
 	color: #B4975A;
@@ -669,6 +670,14 @@ h2.entry-header {
 	margin-top: 55px;
 	margin-bottom: 55px;
 }
+.pre-conference-tour .download-buttons {
+	padding-left: 0px;
+}
+@media (max-width: 1199px) {		
+	#day-2-button .button-table{
+		margin-top: 0px !important;
+	}
+}
 @media (max-width: 1199px) {	
 	.download-buttons,
 	.accomodation-buttons {
@@ -761,7 +770,29 @@ h2.entry-header {
 	.time-note {
 		margin-bottom: 95px;
 	}
+	.button-table:not(.width-33-buttons) {
+		float:left;
+	}
+	.button-table-row {
+		display: block;
+	}
+	.button-table-cell {
+		display: table;
+		text-align: center;
+		vertical-align: middle;
+		text-align: center;
+	}
 } 
+@media (min-width: 1200px) and (max-width: 1599px) {	
+	.button-table-cell {
+		/*width: 100%;*/
+	}
+}
+@media (min-width: 1600px) {	
+	.button-table-cell {
+		margin: auto;
+	}
+}
 /* Content - Program pages */
 
 @media (min-width: 768px) {
@@ -1112,15 +1143,44 @@ footer.footer .facebook:hover{
 .pre-conference-tour .highlighted {
 	color: #B4975A;
 }
+.pre-conference-tour h2 {
+	padding-bottom: 0px;
+}
+.pre-conference-tour h4 {
+    font-weight: bold;
+}
+.pre-conference-tour h3,
+.pre-conference-tour h4,
+.pre-conference-tour .highlighted {
+	color: #B4975A;
+}
+.pre-conference-tour .highlighted {
+	font-style: italic;
+}
 @media (min-width: 768px) {
 	.pre-conference-tour .images-container {		 
 		margin-left: -15px;
 		margin-right: -15px;
+		margin-top:50px;
 	}
 }
-.pre-conference-tour .images-container img {
-	width:100%;
-}  
+@media (min-width: 1600px) {
+	.pre-conference-tour .about-page-link {
+		display:block;
+		float:left;
+	}
+	.pre_conference_buttons_container .width-33-button-container {
+		display:block;
+		float:left;
+		margin-right: 33px;
+	}
+}
+@media (min-width: 992px) {
+	.pre-conference-tour .images-container img {
+		width: 100%;
+	}
+}
+
 /* Contact Form */
 
 .reservation-form {
@@ -1331,13 +1391,37 @@ div.wpcf7-response-output {
     display: block;
     margin-top: 20px;
 }
+.wpcf7 div.food_allergies_01,
+.wpcf7 div.other_dietary_req_01,
+.wpcf7 div.food_allergies_02,
+.wpcf7 div.other_dietary_req_02,
 .wpcf7 div.food_allergies,
 .wpcf7 div.other_dietary_req {
 	display: inline-block !important;
 }
+.wpcf7 span.food_allergies_01,
+.wpcf7 span.other_dietary_req_01,
+.wpcf7 span.food_allergies_02,
+.wpcf7 span.other_dietary_req_02,
 .wpcf7 span.food_allergies,
 .wpcf7 span.other_dietary_req {
 	margin-left: 5px;
+}
+.wpcf7 .payment_method input[type=radio] {
+	margin-right: 5px;
+}
+.wpcf7 .credit-card {
+	margin-right: 25px;
+}
+@media (max-width: 1199px) {
+	.wpcf7 .amount-us-dollars {
+		display:block;
+	}
+}
+@media (min-width: 1200px) {
+	.wpcf7 .amount-us-dollars {
+		float:right;
+	}
 }
 @media (min-width: 768px) {
 	.wpcf7 .dietary_requirement input {

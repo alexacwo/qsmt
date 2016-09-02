@@ -61,7 +61,7 @@ get_header(); ?>
 							
 									<div class="about-row">
 										<div class="about-cell title">
-											Hours of operation:
+											<strong>Hours of operation:</strong>
 										</div> 
 										<div class="about-cell padding">
 										</div> 
@@ -74,7 +74,7 @@ get_header(); ?>
 									
 									<div class="about-row">
 										<div class="about-cell title">
-											Admission:
+											<strong>Admission:</strong>
 										</div>  
 										<div class="about-cell padding">
 										</div> 
@@ -87,7 +87,7 @@ get_header(); ?>
 									
 									<div class="about-row">
 										<div class="about-cell title">
-											Location:
+											<strong>Location:</strong>
 										</div>  
 										<div class="about-cell padding">
 										</div> 
@@ -100,7 +100,7 @@ get_header(); ?>
 									
 									<div class="about-row">
 										<div class="about-cell title">
-											Telephone:
+											<strong>Telephone:</strong>
 										</div>  
 										<div class="about-cell padding">
 										</div> 
@@ -113,7 +113,7 @@ get_header(); ?>
 									
 									<div class="about-row">
 										<div class="about-cell title">
-											Fax:
+											<strong>Fax:</strong>
 										</div>  
 										<div class="about-cell padding">
 										</div> 
@@ -126,7 +126,7 @@ get_header(); ?>
 									
 									<div class="about-row">
 										<div class="about-cell title">
-											Website:
+											<strong>Website:</strong>
 										</div>  
 										<div class="about-cell padding">
 										</div> 
@@ -165,7 +165,7 @@ get_header(); ?>
 						<div class="exhibitions">
 							<div class="col-lg-8" style="padding-left: 0px;"> 
 								<?php if ($galleries_1_and_2_text) { ?>
-									<h3>Galleries 1 and 2:</h3>
+									<h3><strong>Galleries 1 and 2:</strong></h3>
 									<?php echo $galleries_1_and_2_text; ?>
 								<?php } ?>
 							</div>
@@ -177,7 +177,7 @@ get_header(); ?>
 							
 							<div class="col-lg-8" style="padding-left: 0px;"> 						
 								<?php if ($galleries_3_and_4_text) { ?>
-									<h3>Galleries 1 and 2:</h3>
+									<h3><strong>Galleries 1 and 2:</strong></h3>
 									<?php echo $galleries_3_and_4_text; ?>
 								<?php } ?>
 							</div>
@@ -205,7 +205,7 @@ get_header(); ?>
 				<?php $link_to_the_next_page = get_field( "link_to_the_next_page" );
 
 					if( $link_to_the_next_page ) { ?>
-						<a class="about-page-link" href="<?php echo get_home_url().'/'.$link_to_the_next_page->post_name; ?>"><?php echo $link_to_the_next_page->post_title; ?> ></a>
+						<strong><a class="about-page-link" href="<?php echo get_home_url().'/'.$link_to_the_next_page->post_name; ?>"><?php echo $link_to_the_next_page->post_title; ?> ></a></strong>
 					<?php } ?>	
 				
 				<a href="<?php echo get_home_url(); ?>/registration">

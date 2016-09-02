@@ -144,11 +144,10 @@ get_header(); ?>
 		<div class="row">
 			<div class="hidden-xs col-md-2 col-sm-2 col-lg-2">
 			</div>
-			<div class="col-xs-12 col-sm-12 col-md-8 col-sm-8 col-lg-8 download-buttons">	
-			
-				<div class="col-xs-12 col-lg-4">
-					<a href="<?php echo get_template_directory_uri(); ?>/download/QSMT 2017_pre_conference_tour_program.pdf" download>
-						<div class="button-table">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 download-buttons pre_conference_buttons_container">	
+			 
+					<a class="width-33-button-container" href="<?php echo get_template_directory_uri(); ?>/download/QSMT 2017_pre_conference_tour_program.pdf" download>
+						<div class="button-table width-33-buttons">
 							<div class="button-table-row">
 								<div class="button-table-cell">
 									<span class="button 1reg">														
@@ -157,11 +156,9 @@ get_header(); ?>
 								</div>
 							</div>
 						</div>
-					</a>
-				</div>
-				<div class="col-xs-12 col-lg-4">
-					<a href="<?php echo get_template_directory_uri(); ?>/download/QSMT 2017_pre_conference_tour_booking_form.pdf" download>
-						<div class="button-table">
+					</a> 
+					<a class="width-33-button-container" href="<?php echo get_template_directory_uri(); ?>/download/QSMT 2017_pre_conference_tour_booking_form.pdf" download>
+						<div class="button-table width-33-buttons">
 							<div class="button-table-row">
 								<div class="button-table-cell">
 									<span class="button 1reg">														
@@ -170,12 +167,9 @@ get_header(); ?>
 								</div>
 							</div>
 						</div>
-					</a>
-				</div>
-				
-				<div class="col-xs-12 col-lg-4">
-					<a href="<?php echo get_home_url(); ?>/online-tour-booking-form/">
-						<div class="button-table">
+					</a> 
+					<a class="width-33-button-container" href="<?php echo get_home_url(); ?>/online-tour-booking-form/">
+						<div class="button-table width-33-buttons">
 							<div class="button-table-row">
 								<div class="button-table-cell">
 									<span class="button 1reg">			
@@ -184,14 +178,16 @@ get_header(); ?>
 								</div>
 							</div>
 						</div>
-					</a>
-				</div> 
+					</a> 
+				
+				<div class="clearfix"></div>
 				
 				<?php $link_to_the_next_page = get_field( "link_to_the_next_page" );
 
 					if( $link_to_the_next_page ) { ?>
-						<a class="about-page-link" href="<?php echo get_home_url().'/'.$link_to_the_next_page->post_name; ?>"><?php echo $link_to_the_next_page->post_title; ?> ></a>
-					<?php } ?>					
+						<strong><a class="about-page-link" href="<?php echo get_home_url().'/'.$link_to_the_next_page->post_name; ?>"><?php echo $link_to_the_next_page->post_title; ?> ></a></strong>
+					<?php } ?>		
+				<div class="clearfix"></div>
 				
 				<a href="<?php echo get_home_url(); ?>/registration">
 					<div class="button-table">

@@ -22,7 +22,7 @@
 					©Copyright 2016 - 2017 Queen Sirikit Museum of Textiles
 					</p>
 
-					<a href="#" class="facebook" target="_blank"></a>
+					<a href="https://www.facebook.com/qsmtthailand/" class="facebook" target="_blank"></a>
 				</div>
 				<div class="col-xs-2">
 				</div>

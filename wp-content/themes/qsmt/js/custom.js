@@ -78,12 +78,22 @@ jQuery( document ).ready(function() {
 	jQuery( ".registration_fees input[type='radio']" ).change(function() {
 		price = jQuery( this ).data('price');
 		
+		var amountInWordsArray = {
+			160: "One Hundred and Sixty US Dollars",
+			395: "Three Hundered and Ninety Five US Dollars",
+			450: "Four Hundred and Fifty US Dollars",
+			550: "Five Hundred and Fifty US Dollars"
+		};	
+		
 		amountField.val(price);
+		amountInWordsFields.val(amountInWordsArray[price]);	
 		
 		singleDayRegistration = jQuery(".single_day_registration");
 		
-		if (jQuery( this ).val() == 3) {
+		if (price == 160) {
 			singleDayRegistration.show('slow');
+		} else {
+			singleDayRegistration.hide('slow');			
 		}
 	});
 	
@@ -153,33 +163,33 @@ jQuery( document ).ready(function() {
 		});	
 		
 		var amountInWordsArray = {
-			50: "Fifty",
-			100: "One hundred",
-			110: "One hundred and ten",
-			160: "One hundred and sixty",
-			180: "One hundred and eighty",
-			210: "Two hundered and ten",
-			220: "Two hundred and twenty",
-			230: "Two hundred and thirty",
-			280: "Two hundred and eighty",
-			290: "Two hundred and ninety",
-			320: "Three hundred and twenty",
-			330: "Three hundred and thirty",
-			340: "Three hundred and fourty",
-			390: "Three hundred and ninety",
-			410: "Four hundred and ten",
-			440: "Four hundred and fourty",
-			450: "Four hundred and fifty",
-			460: "Four hundred and sixty",
-			500: "Five hundred",
-			510: "Five hundred and ten",
-			520: "Five hundred and twenty",
-			550: "Five hundred and fifty",
-			570: "Five hundred and seventy",
-			620: "Six hundred and twenty",
-			630: "Six hundred and thirty",
-			680: "Six hundred and eighty",
-			730: "Seven hundred and thirty",
+			50: "Fifty US Dollars",
+			100: "One Hundred US Dollars",
+			110: "One Hundred and Ten US Dollars",
+			160: "One Hundred and Sixty US Dollars",
+			180: "One Hundred and Eighty US Dollars",
+			210: "Two Hundred and Ten US Dollars",
+			220: "Two Hundred and Twenty US Dollars",
+			230: "Two Hundred and Thirty US Dollars",
+			280: "Two Hundred and Eighty US Dollars",
+			290: "Two Hundred and Ninety US Dollars",
+			320: "Three Hundred and Twenty US Dollars",
+			330: "Three Hundred and Thirty US Dollars",
+			340: "Three Hundred and Forty US Dollars",
+			390: "Three Hundred and Ninety US Dollars",
+			410: "Four Hundred and Ten US Dollars",
+			440: "Four Hundred and Forty US Dollars",
+			450: "Four Hundred and Fifty US Dollars",
+			460: "Four Hundred and Sixty US Dollars",
+			500: "Five Hundred US Dollars",
+			510: "Five Hundred and Ten US Dollars",
+			520: "Five Hundred and Twenty US Dollars",
+			550: "Five Hundred and Fifty US Dollars",
+			570: "Five Hundred and Seventy US Dollars",
+			620: "Six Hundred and Twenty US Dollars",
+			630: "Six Hundred and Thirty US Dollars",
+			680: "Six Hundred and Eighty US Dollars",
+			730: "Seven Hundred and Thirty US Dollars",
 		};	
 		
 		amountField.val(sum);

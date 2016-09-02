@@ -576,8 +576,8 @@ get_header(); ?>
 							<div class="text">
 								<h4>Day 7-11</h4>
 								
-								Friday
-								<br>13 January-
+								Saturday
+								<br>14 January-
 								<br>Tuesday
 								<br>17 January 2017
 							</div>
@@ -663,7 +663,7 @@ get_header(); ?>
 			</div>
 			<div class="col-lg-8 download-buttons">							
 				
-				<a href="<?php echo get_template_directory_uri(); ?>/download/QSMT_2017_symposium_program_download.pdf" download>
+				<a href="<?php echo get_template_directory_uri(); ?>/download/Symposium_program.pdf" download>
 					<div class="button-table" style="margin-bottom:55px;">
 						<div class="button-table-row">
 							<div class="button-table-cell">
@@ -675,7 +675,7 @@ get_header(); ?>
 					</div>
 				</a>
 
-				<a class="about-page-link" href="<?php echo get_home_url(); ?>/speakers">SPEAKERS ></a>
+				<strong><a class="about-page-link" href="<?php echo get_home_url(); ?>/speakers">SPEAKERS ></a></strong>
 
 				<br>
 

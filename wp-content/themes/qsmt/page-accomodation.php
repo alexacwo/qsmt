@@ -53,12 +53,12 @@ get_header(); ?>
 						<div class="accomodation">
 							<div class="col-lg-8" style="padding-left: 0px;">
 								<?php if ($accomodation_text) { ?>
-									<h3>Accomodation</h3>
+									<h3><strong>Accomodation</strong></h3>
 									<?php echo $accomodation_text; ?>
 								<?php } ?>
 								
 								<div class="accomodation-buttons left download-buttons">
-									<a href="<?php echo get_template_directory_uri(); ?>/download/QSMT_2017_symposium_program_download.pdf" download>
+									<a href="<?php echo get_template_directory_uri(); ?>/download/Holiday_Inn_hotel_reservation_download_form.pdf" download>
 										<div class="button-table">
 											<div class="button-table-row">
 												<div class="button-table-cell">
@@ -97,7 +97,7 @@ get_header(); ?>
 								<?php } ?> 
 								
 								<div class="accomodation-buttons left download-buttons">
-									<a href="<?php echo get_template_directory_uri(); ?>/download/QSMT_2017_symposium_program_download.pdf" download>
+									<a href="<?php echo get_template_directory_uri(); ?>/download/InterContinental_hotel_reservation_download_form.pdf" download>
 										<div class="button-table">
 											<div class="button-table-row">
 												<div class="button-table-cell">
@@ -132,7 +132,7 @@ get_header(); ?>
 							
 							<div class="col-lg-8 accomodation-margin-bottom" style="padding-left: 0px;"> 					
 								<?php if ($airport_transfers_text) { ?>
-								<h3>Airport Transfers</h3>	
+								<h3><strong>Airport Transfers</strong></h3>	
 									<?php echo $airport_transfers_text; ?>
 								<?php } ?>
 							</div>
@@ -162,7 +162,7 @@ get_header(); ?>
 			<div class="col-lg-8 download-buttons">	 
 			
 				<?php if( $link_to_the_next_page ) { ?>
-					<a class="about-page-link" href="<?php echo get_home_url().'/'.$link_to_the_next_page->post_name; ?>"><?php echo $link_to_the_next_page->post_title; ?> ></a>
+					<strong><a class="about-page-link" href="<?php echo get_home_url().'/'.$link_to_the_next_page->post_name; ?>"><?php echo $link_to_the_next_page->post_title; ?> ></a></strong>
 				<?php } ?>
 
 				<br>
