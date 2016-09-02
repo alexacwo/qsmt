@@ -174,7 +174,7 @@ get_header(); ?>
 				</div>
 				
 				<div class="col-xs-12 col-lg-4">
-					<a href="<?php echo get_home_url(); ?>/#">
+					<a href="<?php echo get_home_url(); ?>/online-tour-booking-form/">
 						<div class="button-table">
 							<div class="button-table-row">
 								<div class="button-table-cell">

@@ -1319,8 +1319,12 @@ div.wpcf7-response-output {
 .wpcf7 .credit-card-details,
 .wpcf7 .bank-transfer-details,
 .wpcf7 .single_day_registration,
-.wpcf7 .food_allergies,
-.wpcf7 .other_dietary_req {
+.wpcf7 .food_allergies_single,
+.wpcf7 .other_dietary_req_single,
+.wpcf7 .food_allergies_01,
+.wpcf7 .other_dietary_req_01,
+.wpcf7 .food_allergies_02,
+.wpcf7 .other_dietary_req_02 {
 	display: none;
 }
 .wpcf7 .dietary_requirement .last {	

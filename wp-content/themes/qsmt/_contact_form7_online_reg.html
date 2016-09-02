@@ -78,7 +78,7 @@ Please note: all fields marked with an asterisk (*) are required.
 		<label> Mobile: [tel mobile class:mobile] </label>
 	</div>
 	<div class="width-33 input">
-		<label> *Email: [email email class:email] </label>
+		<label> *Email: [email* email class:email] </label>
 	</div>
 	<div class="width-33 input">
 		<label> Alternative email: [email alternative_email class:alternative_email] </label>
@@ -90,16 +90,16 @@ Please note: all fields marked with an asterisk (*) are required.
 		Dietary Requirement
 	</div>
 	<div class="width-85 input">
-		[checkbox dietary_requirement class:dietary_requirement "Vegetarian" "Vegan" "Halal" "Food Allergies (please specify)" "Other"]
+		[checkbox dietary_requirement class:dietary_requirement_single "Vegetarian" "Vegan" "Halal" "Food Allergies (please specify)" "Other"]
 	</div>
 </div>
 
-<div class="food_allergies">
-	[text food_allergies class:food_allergies_text]
+<div class="food_allergies_single">
+	[text food_allergies class:food_allergies_text_single]
 </div>
 
-<div class="other_dietary_req">
-	[text other_dietary_req class:other_dietary_req]
+<div class="other_dietary_req_single">
+	[text other_dietary_req class:other_dietary_req_single]
 </div>
 
 <div class="form-row">
@@ -114,11 +114,11 @@ Please note: all fields marked with an asterisk (*) are required.
 <h2>REGISTRATION FEES</h2>
 
 <div class="form-row registration_fees">
-	<input type="radio" name="registration_fees" value="0"> Early Bird (received before 31 October 2016) - US$ 450 (THB 14,850)
-	<input type="radio" name="registration_fees" value="1"> Regular (received 1 November - 20 December 2016) - US$ 550 (THB 18,000)
-	<input type="radio" name="registration_fees" value="2"> Student Fee (received by 20 December 2016) - US$ 395 (THB 13,000)*
+	<input type="radio" name="registration_fees" data-price="450" value="Early Bird"> Early Bird (received before 31 October 2016) - US$ 450 (THB 14,850)
+	<input type="radio" name="registration_fees" data-price="550" value="Regular"> Regular (received 1 November - 20 December 2016) - US$ 550 (THB 18,000)
+	<input type="radio" name="registration_fees" data-price="395" value="Student Fee"> Student Fee (received by 20 December 2016) - US$ 395 (THB 13,000)*
 	*a copy of student I.D. must be submitted with registration
-	<input type="radio" name="registration_fees" value="3"> Advance Single-Day Registration (received by 20 December 2016) - US$ 160 (THB 5,000)
+	<input type="radio" name="registration_fees" data-price="160" value="Advance Single-Day Registration"> Advance Single-Day Registration (received by 20 December 2016) - US$ 160 (THB 5,000)
 </div>
 
 <div class="form-row single_day_registration">	
